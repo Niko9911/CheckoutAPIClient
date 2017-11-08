@@ -45,10 +45,15 @@ addons:
   apt:
     packages: clang
 before_install:
+  - cd extension/src
   - phpize
   - ./configure
   - make
-install: make install
+  - cd ../../
+install:
+  - cd extension/src
+  - make install
+  - cd ../../
 before_script:
    - composer install --prefer-source --no-interaction --working-dir ./library
    - echo 'extension = checkout.so' >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
