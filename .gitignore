@@ -20,3 +20,31 @@ temp/
 # Legacy ZF1
 demos/
 extras/documentation
+
+# Extension Directory
+ext/checkoutfinland/.temp/
+ext/checkoutfinland/*.log
+ext/checkoutfinland/ext/*
+
+!ext/checkoutfinland/ext/clean
+!ext/checkoutfinland/ext/config.m4
+!ext/checkoutfinland/ext/config.w32
+!ext/checkoutfinland/ext/ext.h
+!ext/checkoutfinland/ext/ext_config.h
+!ext/checkoutfinland/ext/foodhunt.c
+!ext/checkoutfinland/ext/foodhunt.h
+!ext/checkoutfinland/ext/install
+!ext/checkoutfinland/ext/php_ext.h
+!ext/checkoutfinland/ext/php_foodhunt.h
+!ext/checkoutfinland/ext/kernel
+!ext/checkoutfinland/ext/foodhunt
+
+# Zephir compiler cache files.
+ext/checkoutfinland/ext/foodhunt/helpers/.libs/
+ext/checkoutfinland/ext/foodhunt/helpers/*.lo
+ext/checkoutfinland/ext/foodhunt/libs/.libs/
+ext/checkoutfinland/ext/foodhunt/libs/*.lo
+ext/checkoutfinland/ext/kernel/.libs/
+ext/checkoutfinland/ext/kernel/*.lo
+ext/checkoutfinland/ext/kernel/*.gch
+!ext/checkoutfinland/foodhunt/
