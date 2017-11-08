@@ -11,6 +11,7 @@ API client for the finnish payment gateway Checkout Finland.
 The following versions of PHP are supported:
 
 * PHP 7.1
+* PHP 7.2
 
 Requires:
 * cURL or allow_url_fopen = On in php.ini
