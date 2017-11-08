@@ -1,0 +1,2170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta content="checkout API doc" name="description">
+    <title>
+                    checkout API Documentation
+            </title>
+    <link rel="stylesheet" type="text/css" href="../../asset/static/prettify.css" />
+
+<script src="../../asset/static/prettify.js"></script>
+<script src="../../asset/api_definition.js"></script>
+
+
+                        <link rel="stylesheet" type="text/css" href="../../asset/static/prettify.css" />
+                    <link rel="stylesheet" type="text/css" href="../../asset/static/zephir-theme.css" />
+            
+    
+
+                        <script src="../../asset/static/prettify.js"></script>
+                                    <script src="../../asset/api_definition.js"></script>
+                    <script src="../../asset/static/jquery.min.js"></script>
+                    <script src="../../asset/static/zephir-doc.js"></script>
+                <script>var ZepCurrentPath = '../../'</script>
+    </head>
+ <body onload="prettyPrint()">
+        <div id="top-bar">
+            <div id="top-left">
+                                    checkout Documentation <span class="version">v0.1.0</span>
+                            </div>
+            <div id="top-right">
+            </div>
+        </div>
+        <div id="body">
+            <div id="body-left">
+                <div class="header-search">
+                    <input class="search-box" placeholder="Search for a class or namespace " type="text" />
+                    <div id="menu-wrapper">
+                    </div>
+                </div>
+            </div>
+            <div id="body-right">
+                <div class="content">
+                    
+<div class="breadcrumb">
+    
+    <ul>
+        
+        <li><a href="../../index.html">Home</a></li>
+        
+                <li><a href="../../classes.html">Classes</a></li>
+                <li><a >Checkout\Payment</a></li>
+                
+    </ul>
+    
+</div>
+<div class="class-header clearfix">
+    
+    
+    <div class="access-buttons">
+        <a class="zep-button" href="../../source/Checkout/Payment.html">Source</a>
+
+            </div>
+    
+    <div class="class-full-name">
+        
+        <span class="class-type">Class</span>
+        
+                <span class="namespace-piece">
+            <a href="../../namespace/Checkout.html">Checkout</a>
+        </span>
+                <h1 class="class-name">Payment</h1>
+    </div>
+
+</div>
+
+
+<div class="hidden-anchor"  id="methods"></div>
+<div class="methods-summary standard-bandeau">Methods</div>
+<ul class="method-summary-list">
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-__construct">__construct</a></span>(<span class="param-data-type">variable</span> <span class="variable param-name">$merchantId</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$merchantSecret</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$allowSmallPurchases</span>)
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-setDefaultValues">setDefaultValues</a></span>()
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-setOrderData">setOrderData</a></span>(<span class="param-data-type">variable</span> <span class="variable param-name">$stamp</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$amount</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$reference</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$message</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$deliveryDate</span>)
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Sets payment/order information                </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-setCustomerData">setCustomerData</a></span>(<span class="param-data-type">variable</span> <span class="variable param-name">$firstName</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$familyName</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$address</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$postcode</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$postOffice</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$country</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$language</span>)
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Sets customer information                </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-setData">setData</a></span>(<span class="param-data-type">array</span> <span class="variable param-name">$params</span>)
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Sets multiple variables at once                </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-setUrls">setUrls</a></span>(<span class="param-data-type">string</span> <span class="variable param-name">$returnUrl</span>)
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Set all response urls as the same return url.                </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-calculateMac">calculateMac</a></span>()
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    string | null                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Calculates MAC string from all variables in the class                </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-getAddress">getAddress</a></span>()
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    string | null                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-setAddress">setAddress</a></span>(<span class="param-data-type">string</span> <span class="variable param-name">$address</span>)
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-getAlgorithm">getAlgorithm</a></span>()
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    string | null                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-setAlgorithm">setAlgorithm</a></span>(<span class="param-data-type">string</span> <span class="variable param-name">$algorithm</span>)
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-getAmount">getAmount</a></span>()
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    string | null                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-setAmount">setAmount</a></span>(<span class="param-data-type">int</span> <span class="variable param-name">$amount</span>)
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-getCancelUrl">getCancelUrl</a></span>()
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    string | null                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-setCancelUrl">setCancelUrl</a></span>(<span class="param-data-type">string</span> <span class="variable param-name">$cancelUrl</span>)
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-getContent">getContent</a></span>()
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    string | null                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-setContent">setContent</a></span>(<span class="param-data-type">string</span> <span class="variable param-name">$content</span>)
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-getCountry">getCountry</a></span>()
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    string | null                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-setCountry">setCountry</a></span>(<span class="param-data-type">string</span> <span class="variable param-name">$country</span>)
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-getCurrency">getCurrency</a></span>()
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    string | null                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-setCurrency">setCurrency</a></span>(<span class="param-data-type">string</span> <span class="variable param-name">$currency</span>)
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-getDelayedUrl">getDelayedUrl</a></span>()
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    string | null                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-setDelayedUrl">setDelayedUrl</a></span>(<span class="param-data-type">string</span> <span class="variable param-name">$delayedUrl</span>)
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-getDeliveryDate">getDeliveryDate</a></span>(<span class="param-data-type">variable</span> <span class="variable param-name">$format</span>)
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-setDeliveryDate">setDeliveryDate</a></span>(<span class="param-data-type">variable</span> <span class="variable param-name">$deliveryDate</span>)
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-getDevice">getDevice</a></span>()
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    string | null                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-setDevice">setDevice</a></span>(<span class="param-data-type">string</span> <span class="variable param-name">$device</span>)
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-getFamilyName">getFamilyName</a></span>()
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    string | null                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-setFamilyName">setFamilyName</a></span>(<span class="param-data-type">string</span> <span class="variable param-name">$familyName</span>)
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-getFirstName">getFirstName</a></span>()
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    string | null                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-setFirstName">setFirstName</a></span>(<span class="param-data-type">string</span> <span class="variable param-name">$firstName</span>)
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-getLanguage">getLanguage</a></span>()
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    string | null                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-setLanguage">setLanguage</a></span>(<span class="param-data-type">string</span> <span class="variable param-name">$language</span>)
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-getMerchantId">getMerchantId</a></span>()
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    string | null                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-setMerchantId">setMerchantId</a></span>(<span class="param-data-type">string</span> <span class="variable param-name">$merchantId</span>)
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-getMerchantSecret">getMerchantSecret</a></span>()
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    string | null                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-setMerchantSecret">setMerchantSecret</a></span>(<span class="param-data-type">string</span> <span class="variable param-name">$merchantSecret</span>)
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-getMessage">getMessage</a></span>()
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    string | null                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-setMessage">setMessage</a></span>(<span class="param-data-type">string</span> <span class="variable param-name">$message</span>)
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-getPostOffice">getPostOffice</a></span>()
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    string | null                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-setPostOffice">setPostOffice</a></span>(<span class="param-data-type">string</span> <span class="variable param-name">$postOffice</span>)
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-getPostcode">getPostcode</a></span>()
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    string | null                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-setPostcode">setPostcode</a></span>(<span class="param-data-type">string</span> <span class="variable param-name">$postcode</span>)
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-getReference">getReference</a></span>()
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    string | null                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-setReference">setReference</a></span>(<span class="param-data-type">string</span> <span class="variable param-name">$reference</span>)
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-getRejectUrl">getRejectUrl</a></span>()
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    string | null                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-setRejectUrl">setRejectUrl</a></span>(<span class="param-data-type">string</span> <span class="variable param-name">$rejectUrl</span>)
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-getReturnUrl">getReturnUrl</a></span>()
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    string | null                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-setReturnUrl">setReturnUrl</a></span>(<span class="param-data-type">string</span> <span class="variable param-name">$returnUrl</span>)
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-getStamp">getStamp</a></span>()
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    string | null                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-setStamp">setStamp</a></span>(<span class="param-data-type">string</span> <span class="variable param-name">$stamp</span>)
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-getType">getType</a></span>()
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    string | null                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-setType">setType</a></span>(<span class="param-data-type">string</span> <span class="variable param-name">$type</span>)
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-getVersion">getVersion</a></span>()
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    string | null                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <span class="method-name"><a href="#method-details-setVersion">setVersion</a></span>(<span class="param-data-type">string</span> <span class="variable param-name">$version</span>)
+            <span class="method-return">
+                &nbsp;<strong>:</strong>&nbsp;
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+
+    </ul>
+
+<div class="hidden-anchor"  id="methods-details"></div>
+<div class="methods-summary standard-bandeau">Methods Details</div>
+<ul class="method-details-list">
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-__construct"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">__construct</span>(<span class="param-data-type">variable</span> <span class="variable param-name">$merchantId</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$merchantSecret</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$allowSmallPurchases</span>)
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-setDefaultValues"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-protected keyword">protected</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">setDefaultValues</span>()
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-setOrderData"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">setOrderData</span>(<span class="param-data-type">variable</span> <span class="variable param-name">$stamp</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$amount</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$reference</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$message</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$deliveryDate</span>)
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                        Sets payment/order information                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-setCustomerData"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">setCustomerData</span>(<span class="param-data-type">variable</span> <span class="variable param-name">$firstName</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$familyName</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$address</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$postcode</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$postOffice</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$country</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$language</span>)
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                        Sets customer information                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-setData"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">setData</span>(<span class="param-data-type">array</span> <span class="variable param-name">$params</span>)
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                        Sets multiple variables at once                    </div>
+                    <div class="description">
+                        $example_data =  [
+       'stamp'            => '1245132',
+       'amount'           => '1000',
+       'reference'        => '12344',
+       'message'          => 'Nuts and bolts',
+       'deliveryDate'     => new \DateTime('2014-12-31'),
+       'firstName'        => 'John',
+       'familyName'       => 'Doe',
+       'address'          => 'Some street 13 B 2',
+       'postcode'         => '33100',
+       'postOffice'       => 'Some city',
+       'country'          => 'FIN',
+       'language'         => 'EN'
+       ];                    </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-setUrls"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">setUrls</span>(<span class="param-data-type">string</span> <span class="variable param-name">$returnUrl</span>)
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                        Set all response urls as the same return url.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-calculateMac"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">calculateMac</span>()
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                        Calculates MAC string from all variables in the class                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-getAddress"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">getAddress</span>()
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-setAddress"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">setAddress</span>(<span class="param-data-type">string</span> <span class="variable param-name">$address</span>)
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-getAlgorithm"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">getAlgorithm</span>()
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-setAlgorithm"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">setAlgorithm</span>(<span class="param-data-type">string</span> <span class="variable param-name">$algorithm</span>)
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-getAmount"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">getAmount</span>()
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-setAmount"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">setAmount</span>(<span class="param-data-type">int</span> <span class="variable param-name">$amount</span>)
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-getCancelUrl"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">getCancelUrl</span>()
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-setCancelUrl"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">setCancelUrl</span>(<span class="param-data-type">string</span> <span class="variable param-name">$cancelUrl</span>)
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-getContent"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">getContent</span>()
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-setContent"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">setContent</span>(<span class="param-data-type">string</span> <span class="variable param-name">$content</span>)
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-getCountry"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">getCountry</span>()
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-setCountry"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">setCountry</span>(<span class="param-data-type">string</span> <span class="variable param-name">$country</span>)
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-getCurrency"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">getCurrency</span>()
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-setCurrency"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">setCurrency</span>(<span class="param-data-type">string</span> <span class="variable param-name">$currency</span>)
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-getDelayedUrl"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">getDelayedUrl</span>()
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-setDelayedUrl"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">setDelayedUrl</span>(<span class="param-data-type">string</span> <span class="variable param-name">$delayedUrl</span>)
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-getDeliveryDate"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">getDeliveryDate</span>(<span class="param-data-type">variable</span> <span class="variable param-name">$format</span>)
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-setDeliveryDate"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">setDeliveryDate</span>(<span class="param-data-type">variable</span> <span class="variable param-name">$deliveryDate</span>)
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-getDevice"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">getDevice</span>()
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-setDevice"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">setDevice</span>(<span class="param-data-type">string</span> <span class="variable param-name">$device</span>)
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-getFamilyName"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">getFamilyName</span>()
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-setFamilyName"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">setFamilyName</span>(<span class="param-data-type">string</span> <span class="variable param-name">$familyName</span>)
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-getFirstName"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">getFirstName</span>()
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-setFirstName"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">setFirstName</span>(<span class="param-data-type">string</span> <span class="variable param-name">$firstName</span>)
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-getLanguage"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">getLanguage</span>()
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-setLanguage"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">setLanguage</span>(<span class="param-data-type">string</span> <span class="variable param-name">$language</span>)
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-getMerchantId"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">getMerchantId</span>()
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-setMerchantId"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">setMerchantId</span>(<span class="param-data-type">string</span> <span class="variable param-name">$merchantId</span>)
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-getMerchantSecret"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">getMerchantSecret</span>()
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-setMerchantSecret"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">setMerchantSecret</span>(<span class="param-data-type">string</span> <span class="variable param-name">$merchantSecret</span>)
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-getMessage"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">getMessage</span>()
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-setMessage"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">setMessage</span>(<span class="param-data-type">string</span> <span class="variable param-name">$message</span>)
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-getPostOffice"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">getPostOffice</span>()
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-setPostOffice"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">setPostOffice</span>(<span class="param-data-type">string</span> <span class="variable param-name">$postOffice</span>)
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-getPostcode"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">getPostcode</span>()
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-setPostcode"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">setPostcode</span>(<span class="param-data-type">string</span> <span class="variable param-name">$postcode</span>)
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-getReference"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">getReference</span>()
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-setReference"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">setReference</span>(<span class="param-data-type">string</span> <span class="variable param-name">$reference</span>)
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-getRejectUrl"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">getRejectUrl</span>()
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-setRejectUrl"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">setRejectUrl</span>(<span class="param-data-type">string</span> <span class="variable param-name">$rejectUrl</span>)
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-getReturnUrl"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">getReturnUrl</span>()
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-setReturnUrl"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">setReturnUrl</span>(<span class="param-data-type">string</span> <span class="variable param-name">$returnUrl</span>)
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-getStamp"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">getStamp</span>()
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-setStamp"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">setStamp</span>(<span class="param-data-type">string</span> <span class="variable param-name">$stamp</span>)
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-getType"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">getType</span>()
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-setType"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">setType</span>(<span class="param-data-type">string</span> <span class="variable param-name">$type</span>)
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-getVersion"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">getVersion</span>()
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    
+        
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-setVersion"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+            <div class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>&nbsp;<span class="method-name">setVersion</span>(<span class="param-data-type">string</span> <span class="variable param-name">$version</span>)
+            </div>
+            <div class="method-doc">
+                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+        </div>
+    </div>
+</li>
+
+    </ul>                </div>
+            </div>
+        </div>
+    </body>
+</html>
