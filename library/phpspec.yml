@@ -4,5 +4,5 @@ suites:
     CheckoutFinland:
         namespace: CheckoutFinland
         spec_prefix: Spec
-        src_path: 'src'
-        spec_path: 'tests'
+        src_path: 'library/src'
+        spec_path: 'library/tests'
