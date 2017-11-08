@@ -1,10 +1,56 @@
+#language: php
+#
+#php:
+#    - 7.1
+#    - 7.2
+#
+#before_script:
+#    - composer install --prefer-source --no-interaction --working-dir ./library
+#
+#script: library/vendor/bin/phpspec run
+
+
+
+dist: precise
+sudo: required
 language: php
-
 php:
-    - 7.1
-    - 7.2
-
+  - 5.5
+  - 5.6
+  - 7.0
+  - 7.1
+  - nightly
+env: CC=gcc
+matrix:
+  allow_failures:
+    - php: nightly
+    - php: 5.4
+    - php: 5.5
+    - php: 5.6
+    - php: 7.0
+  include:
+    - php: 5.4
+      env: CC=clang
+    - php: 5.5
+      env: CC=clang
+    - php: 5.6
+      env: CC=clang
+    - php: 7.0
+      env: CC=clang
+    - php: 7.1
+      env: CC=clang
+    - php: 7.2
+      env: CC=clang
+addons:
+  apt:
+    packages: clang
+before_install:
+  - phpize
+  - ./configure
+  - make
+install: make install
 before_script:
-    - composer install --prefer-source --no-interaction --working-dir ./library
-
-script: library/vendor/bin/phpspec run
+   - composer install --prefer-source --no-interaction --working-dir ./library
+   - echo 'extension = checkout.so' >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+script:
+   - library/vendor/bin/phpspec run
