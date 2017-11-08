@@ -1,0 +1,5 @@
+
+extern zend_class_entry *checkout_exceptions_urltoolongexception_ce;
+
+ZEPHIR_INIT_CLASS(Checkout_Exceptions_UrlTooLongException);
+
