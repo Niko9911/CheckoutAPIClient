@@ -1,7 +1,6 @@
 <?php
 
 namespace CheckoutFinland;
-
 use CheckoutFinland\Exceptions\AmountTooLargeException;
 use CheckoutFinland\Exceptions\AmountUnderMinimumException;
 use CheckoutFinland\Exceptions\CurrencyNotSupportedException;
@@ -92,7 +91,7 @@ class Payment
     protected $algorithm;
 
     /**
-     * @var \DateTimeInterface Expected delivery date (N 8) (Ymd)
+     * @var \DateTime Expected delivery date (N 8) (Ymd)
      */
     protected $deliveryDate;
     /**
@@ -128,8 +127,8 @@ class Payment
      */
     public function __construct($merchantId, $merchantSecret, $allowSmallPurchases = false)
     {
-        $this->merchantId = $merchantId;
-        $this->merchantSecret = $merchantSecret;
+        $this->merchantId      = $merchantId;
+        $this->merchantSecret  = $merchantSecret;
 
         $this->allowSmallPurchases = $allowSmallPurchases;
 
@@ -141,12 +140,12 @@ class Payment
      */
     private function setDefaultValues()
     {
-        $this->version = '0001';
-        $this->device = '10';
-        $this->content = '1';
-        $this->type = '0';
-        $this->algorithm = '3';
-        $this->currency = 'EUR';
+        $this->version      = '0001';
+        $this->device       = '10';
+        $this->content      = '1';
+        $this->type         = '0';
+        $this->algorithm    = '3';
+        $this->currency     = 'EUR';
 
         return $this;
     }
@@ -158,13 +157,13 @@ class Payment
      * @param $amount
      * @param $reference
      * @param $message
-     * @param \DateTimeInterface $deliveryDate
+     * @param \DateTime $deliveryDate
      * @return $this
      * @throws \CheckoutFinland\Exceptions\AmountUnderMinimumException
      * @throws \CheckoutFinland\Exceptions\AmountTooLargeException
      * @throws \CheckoutFinland\Exceptions\VariableTooLongException
      */
-    public function setOrderData($stamp, $amount, $reference, $message, \DateTimeInterface $deliveryDate)
+    public function setOrderData($stamp, $amount, $reference, $message, \DateTime $deliveryDate)
     {
         $this->setStamp($stamp);
         $this->setAmount($amount);
@@ -223,10 +222,11 @@ class Payment
      */
     public function setData(array $params)
     {
-        foreach ($params as $key => $value) {
-            $setter_name = 'set' . ucfirst($key);
+        foreach($params as $key => $value)
+        {
+            $setter_name = 'set' .ucfirst($key);
 
-            if (method_exists($this, $setter_name)) {
+            if(method_exists($this, $setter_name)) {
                 $this->$setter_name($value);
             }
         }
@@ -254,35 +254,35 @@ class Payment
     /**
      *   Calculates MAC string from all variables in the class
      *
-     * @return string
+     *   @return string
      */
-    public function calculateMac(): string
+    public function calculateMac(): ?string
     {
         $mac_string = $this->getVersion();
 
-        $mac_string .= '+' . $this->getStamp();
-        $mac_string .= '+' . $this->getAmount();
-        $mac_string .= '+' . $this->getReference();
-        $mac_string .= '+' . $this->getMessage();
-        $mac_string .= '+' . $this->getLanguage();
-        $mac_string .= '+' . $this->getMerchantId();
-        $mac_string .= '+' . $this->getReturnUrl();
-        $mac_string .= '+' . $this->getCancelUrl();
-        $mac_string .= '+' . $this->getRejectUrl();
-        $mac_string .= '+' . $this->getDelayedUrl();
-        $mac_string .= '+' . $this->getCountry();
-        $mac_string .= '+' . $this->getCurrency();
-        $mac_string .= '+' . $this->getDevice();
-        $mac_string .= '+' . $this->getContent();
-        $mac_string .= '+' . $this->getType();
-        $mac_string .= '+' . $this->getAlgorithm();
-        $mac_string .= '+' . $this->getDeliveryDate()->format('Ymd');
-        $mac_string .= '+' . $this->getFirstName();
-        $mac_string .= '+' . $this->getFamilyName();
-        $mac_string .= '+' . $this->getAddress();
-        $mac_string .= '+' . $this->getPostcode();
-        $mac_string .= '+' . $this->getPostOffice();
-        $mac_string .= '+' . $this->getMerchantSecret();
+        $mac_string .= '+' .$this->getStamp();
+        $mac_string .= '+' .$this->getAmount();
+        $mac_string .= '+' .$this->getReference();
+        $mac_string .= '+' .$this->getMessage();
+        $mac_string .= '+' .$this->getLanguage();
+        $mac_string .= '+' .$this->getMerchantId();
+        $mac_string .= '+' .$this->getReturnUrl();
+        $mac_string .= '+' .$this->getCancelUrl();
+        $mac_string .= '+' .$this->getRejectUrl();
+        $mac_string .= '+' .$this->getDelayedUrl();
+        $mac_string .= '+' .$this->getCountry();
+        $mac_string .= '+' .$this->getCurrency();
+        $mac_string .= '+' .$this->getDevice();
+        $mac_string .= '+' .$this->getContent();
+        $mac_string .= '+' .$this->getType();
+        $mac_string .= '+' .$this->getAlgorithm();
+        $mac_string .= '+' .$this->getDeliveryDate()->format('Ymd');
+        $mac_string .= '+' .$this->getFirstName();
+        $mac_string .= '+' .$this->getFamilyName();
+        $mac_string .= '+' .$this->getAddress();
+        $mac_string .= '+' .$this->getPostcode();
+        $mac_string .= '+' .$this->getPostOffice();
+        $mac_string .= '+' .$this->getMerchantSecret();
 
         return strtoupper(md5($mac_string));
     }
@@ -290,446 +290,7 @@ class Payment
     /**
      * @return string
      */
-    public function getVersion(): string
-    {
-        return $this->version;
-    }
-
-    /**
-     * @param string $version
-     * @return $this
-     */
-    public function setVersion($version)
-    {
-        $this->version = substr($version, 0, 4);
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getStamp(): string
-    {
-        return $this->stamp;
-    }
-
-    /**
-     * @param string $stamp
-     * @throws VariableTooLongException
-     * @return $this
-     */
-    public function setStamp($stamp)
-    {
-        if (strlen($stamp) > 20) {
-            throw new VariableTooLongException("Stamp: $stamp too long, max length is 20 characters.");
-        }
-
-        $this->stamp = $stamp;
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getAmount(): string
-    {
-        return $this->amount;
-    }
-
-    /**
-     * @param string $amount
-     * @throws AmountTooLargeException
-     * @throws AmountUnderMinimumException
-     * @return $this
-     */
-    public function setAmount($amount)
-    {
-        if (strlen($amount) > 8) {
-            throw new AmountTooLargeException($amount . ' is too large.');
-        }
-
-        /** @noinspection TypeUnsafeComparisonInspection */
-        if ($this->allowSmallPurchases == false && $amount < 100) {
-            throw new AmountUnderMinimumException('1€ is the minimum allowed amount.');
-        }
-
-        $this->amount = $amount;
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getReference(): string
-    {
-        return $this->reference;
-    }
-
-    /**
-     * @param string $reference
-     * @throws VariableTooLongException
-     * @return $this
-     */
-    public function setReference($reference)
-    {
-        if (strlen($reference) > 20) {
-            throw new VariableTooLongException("Reference: $reference too long, max length is 20 characters.");
-        }
-
-        $this->reference = $reference;
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getMessage(): string
-    {
-        return $this->message;
-    }
-
-    /**
-     * @param string $message
-     * @return $this
-     */
-    public function setMessage($message)
-    {
-        $this->message = substr($message, 0, 1000);
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getLanguage(): string
-    {
-        return $this->language;
-    }
-
-    /**
-     * @param string $language
-     * @return $this
-     */
-    public function setLanguage($language)
-    {
-        $this->language = substr($language, 0, 2);
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getMerchantId(): string
-    {
-        return $this->merchantId;
-    }
-
-    /**
-     * @param string $merchantId
-     * @throws VariableTooLongException
-     * @return $this
-     */
-    public function setMerchantId($merchantId)
-    {
-        if (strlen($merchantId) > 20) {
-            throw new VariableTooLongException("Merchant id: $merchantId too long, max length is 20 characters");
-        }
-
-        $this->merchantId = $merchantId;
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getReturnUrl(): string
-    {
-        return $this->returnUrl;
-    }
-
-    /**
-     * @param string $returnUrl
-     * @throws UrlTooLongException
-     * @return $this
-     */
-    public function setReturnUrl($returnUrl)
-    {
-        if (strlen($returnUrl) > 300) {
-            throw new UrlTooLongException('Max url length is 300 characters');
-        }
-
-        $this->returnUrl = $returnUrl;
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCancelUrl(): string
-    {
-        return $this->cancelUrl;
-    }
-
-    /**
-     * @param string $cancelUrl
-     * @throws UrlTooLongException
-     * @return $this
-     */
-    public function setCancelUrl($cancelUrl)
-    {
-
-        if (strlen($cancelUrl) > 300) {
-            throw new UrlTooLongException('Max url length is 300 characters');
-        }
-
-        $this->cancelUrl = $cancelUrl;
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getRejectUrl(): string
-    {
-        return $this->rejectUrl;
-    }
-
-    /**
-     * @param string $rejectUrl
-     * @throws UrlTooLongException
-     * @return $this
-     */
-    public function setRejectUrl($rejectUrl)
-    {
-        if (strlen($rejectUrl) > 300) {
-            throw new UrlTooLongException('Max url length is 300 characters');
-        }
-
-        $this->rejectUrl = $rejectUrl;
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getDelayedUrl(): string
-    {
-        return $this->delayedUrl;
-    }
-
-    /**
-     * @param string $delayedUrl
-     * @throws UrlTooLongException
-     * @return $this
-     */
-    public function setDelayedUrl($delayedUrl)
-    {
-        if (strlen($delayedUrl) > 300) {
-            throw new UrlTooLongException('Max url length is 300 characters');
-        }
-
-        $this->delayedUrl = $delayedUrl;
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCountry(): string
-    {
-        return $this->country;
-    }
-
-    /**
-     * @param string $country
-     * @return $this
-     */
-    public function setCountry($country)
-    {
-        $this->country = substr($country, 0, 3);
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCurrency(): string
-    {
-        return $this->currency;
-    }
-
-    /**
-     * @param string $currency
-     * @throws CurrencyNotSupportedException
-     * @return $this
-     */
-    public function setCurrency($currency)
-    {
-        /** @noinspection TypeUnsafeComparisonInspection */
-        if ($currency != 'EUR') {
-            throw new CurrencyNotSupportedException('EUR is currently the only supported currency');
-        }
-
-        $this->currency = $currency;
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getDevice(): string
-    {
-        return $this->device;
-    }
-
-    /**
-     * @param string $device
-     * @return $this
-     */
-    public function setDevice($device)
-    {
-        $this->device = substr($device, 0, 2);
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getContent(): string
-    {
-        return $this->content;
-    }
-
-    /**
-     * @param string $content
-     * @return $this
-     */
-    public function setContent($content)
-    {
-        $this->content = substr($content, 0, 2);
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getType(): string
-    {
-        return $this->type;
-    }
-
-    /**
-     * @param string $type
-     * @return $this
-     */
-    public function setType($type)
-    {
-        $this->type = $type[0];
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getAlgorithm(): string
-    {
-        return $this->algorithm;
-    }
-
-    /**
-     * @param string $algorithm
-     * @return $this
-     */
-    public function setAlgorithm($algorithm)
-    {
-        $this->algorithm = $algorithm[0];
-
-        return $this;
-    }
-
-    /**
-     * @param $format
-     * @return mixed
-     */
-    public function getDeliveryDate($format = null)
-    {
-        if ($format) {
-            return $this->deliveryDate->format($format);
-        }
-
-        return $this->deliveryDate;
-
-    }
-
-    /**
-     * @param \DateTimeInterface $deliveryDate
-     * @return $this
-     */
-    public function setDeliveryDate(\DateTimeInterface $deliveryDate)
-    {
-        $this->deliveryDate = $deliveryDate;
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getFirstName(): string
-    {
-        return $this->firstName;
-    }
-
-    /**
-     * @param string $firstName
-     * @return $this
-     */
-    public function setFirstName($firstName)
-    {
-        $this->firstName = substr($firstName, 0, 40);
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getFamilyName(): string
-    {
-        return $this->familyName;
-    }
-
-    /**
-     * @param string $familyName
-     * @return $this
-     */
-    public function setFamilyName($familyName)
-    {
-        $this->familyName = substr($familyName, 0, 40);
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getAddress(): string
+    public function getAddress(): ?string
     {
         return $this->address;
     }
@@ -749,18 +310,18 @@ class Payment
     /**
      * @return string
      */
-    public function getPostcode(): string
+    public function getAlgorithm(): ?string
     {
-        return $this->postcode;
+        return $this->algorithm;
     }
 
     /**
-     * @param string $postcode
+     * @param string $algorithm
      * @return $this
      */
-    public function setPostcode($postcode)
+    public function setAlgorithm($algorithm)
     {
-        $this->postcode = substr($postcode, 0, 14);
+        $this->algorithm = $algorithm[0];
 
         return $this;
     }
@@ -768,7 +329,310 @@ class Payment
     /**
      * @return string
      */
-    public function getPostOffice(): string
+    public function getAmount(): ?string
+    {
+        return $this->amount;
+    }
+
+    /**
+     * @param string $amount
+     * @throws AmountTooLargeException
+     * @throws AmountUnderMinimumException
+     * @return $this
+     */
+    public function setAmount($amount)
+    {
+        if(strlen($amount) > 8 ) {
+            throw new AmountTooLargeException($amount . ' is too large.');
+        }
+
+        if($this->allowSmallPurchases === false && $amount < 100) {
+            throw new AmountUnderMinimumException('1€ is the minimum allowed amount.');
+        }
+
+        $this->amount = $amount;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCancelUrl(): ?string
+    {
+        return $this->cancelUrl;
+    }
+
+    /**
+     * @param string $cancelUrl
+     * @throws UrlTooLongException
+     * @return $this
+     */
+    public function setCancelUrl($cancelUrl)
+    {
+
+        if(strlen($cancelUrl) > 300) {
+            throw new UrlTooLongException('Max url length is 300 characters');
+        }
+
+        $this->cancelUrl = $cancelUrl;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getContent(): ?string
+    {
+        return $this->content;
+    }
+
+    /**
+     * @param string $content
+     * @return $this
+     */
+    public function setContent($content)
+    {
+        $this->content = substr($content, 0, 2);
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCountry(): ?string
+    {
+        return $this->country;
+    }
+
+    /**
+     * @param string $country
+     * @return $this
+     */
+    public function setCountry($country)
+    {
+        $this->country = substr($country, 0, 3);
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCurrency(): ?string
+    {
+        return $this->currency;
+    }
+
+    /**
+     * @param string $currency
+     * @throws CurrencyNotSupportedException
+     * @return $this
+     */
+    public function setCurrency($currency)
+    {
+        if(strtoupper($currency) !== 'EUR') {
+            throw new CurrencyNotSupportedException('EUR is currently the only supported currency');
+        }
+
+        $this->currency = $currency;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDelayedUrl(): ?string
+    {
+        return $this->delayedUrl;
+    }
+
+    /**
+     * @param string $delayedUrl
+     * @throws UrlTooLongException
+     * @return $this
+     */
+    public function setDelayedUrl($delayedUrl)
+    {
+        if(strlen($delayedUrl) > 300) {
+            throw new UrlTooLongException('Max url length is 300 characters');
+        }
+
+        $this->delayedUrl = $delayedUrl;
+
+        return $this;
+    }
+
+    /**
+     * @param $format
+     * @return mixed
+     */
+    public function getDeliveryDate($format = null)
+    {
+        if($format) {
+            return $this->deliveryDate->format($format);
+        }
+
+        return $this->deliveryDate;
+
+    }
+
+    /**
+     * @param \DateTime $deliveryDate
+     * @return $this
+     */
+    public function setDeliveryDate(\DateTime $deliveryDate)
+    {
+        $this->deliveryDate = $deliveryDate;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDevice(): ?string
+    {
+        return $this->device;
+    }
+
+    /**
+     * @param string $device
+     * @return $this
+     */
+    public function setDevice($device)
+    {
+        $this->device = substr($device, 0, 2);
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFamilyName(): ?string
+    {
+        return $this->familyName;
+    }
+
+    /**
+     * @param string $familyName
+     * @return $this
+     */
+    public function setFamilyName($familyName)
+    {
+        $this->familyName = substr($familyName, 0, 40);
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFirstName(): ?string
+    {
+        return $this->firstName;
+    }
+
+    /**
+     * @param string $firstName
+     * @return $this
+     */
+    public function setFirstName($firstName)
+    {
+        $this->firstName = substr($firstName, 0, 40);
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLanguage(): ?string
+    {
+        return $this->language;
+    }
+
+    /**
+     * @param string $language
+     * @return $this
+     */
+    public function setLanguage($language)
+    {
+        $this->language = substr($language, 0, 2);
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMerchantId(): ?string
+    {
+        return $this->merchantId;
+    }
+
+    /**
+     * @param string $merchantId
+     * @throws VariableTooLongException
+     * @return $this
+     */
+    public function setMerchantId($merchantId)
+    {
+        if(strlen($merchantId) > 20 ) {
+            throw new VariableTooLongException("Merchant id: $merchantId too long, max length is 20 characters");
+        }
+
+        $this->merchantId = $merchantId;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMerchantSecret(): ?string
+    {
+        return $this->merchantSecret;
+    }
+
+    /**
+     * @param string $merchantSecret
+     * @return $this
+     */
+    public function setMerchantSecret($merchantSecret)
+    {
+        $this->merchantSecret = $merchantSecret;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMessage(): ?string
+    {
+        return $this->message;
+    }
+
+    /**
+     * @param string $message
+     * @return $this
+     */
+    public function setMessage($message)
+    {
+        $this->message = substr($message, 0, 1000);
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPostOffice(): ?string
     {
         return $this->postOffice;
     }
@@ -787,18 +651,152 @@ class Payment
     /**
      * @return string
      */
-    public function getMerchantSecret(): string
+    public function getPostcode(): ?string
     {
-        return $this->merchantSecret;
+        return $this->postcode;
     }
 
     /**
-     * @param string $merchantSecret
+     * @param string $postcode
      * @return $this
      */
-    public function setMerchantSecret($merchantSecret)
+    public function setPostcode($postcode)
     {
-        $this->merchantSecret = $merchantSecret;
+        $this->postcode = substr($postcode, 0, 14);
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getReference(): ?string
+    {
+        return $this->reference;
+    }
+
+    /**
+     * @param string $reference
+     * @throws VariableTooLongException
+     * @return $this
+     */
+    public function setReference($reference)
+    {
+        if(strlen($reference) > 20) {
+            throw new VariableTooLongException("Reference: $reference too long, max length is 20 characters.");
+        }
+
+        $this->reference = $reference;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getRejectUrl(): ?string
+    {
+        return $this->rejectUrl;
+    }
+
+    /**
+     * @param string $rejectUrl
+     * @throws UrlTooLongException
+     * @return $this
+     */
+    public function setRejectUrl($rejectUrl)
+    {
+        if(strlen($rejectUrl) > 300) {
+            throw new UrlTooLongException('Max url length is 300 characters');
+        }
+
+        $this->rejectUrl = $rejectUrl;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getReturnUrl(): ?string
+    {
+        return $this->returnUrl;
+    }
+
+    /**
+     * @param string $returnUrl
+     * @throws UrlTooLongException
+     * @return $this
+     */
+    public function setReturnUrl($returnUrl)
+    {
+        if(strlen($returnUrl) > 300) {
+            throw new UrlTooLongException('Max url length is 300 characters');
+        }
+
+        $this->returnUrl = $returnUrl;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getStamp(): ?string
+    {
+        return $this->stamp;
+    }
+
+    /**
+     * @param string $stamp
+     * @throws VariableTooLongException
+     * @return $this
+     */
+    public function setStamp($stamp)
+    {
+        if(strlen($stamp) > 20) {
+            throw new VariableTooLongException("Stamp: $stamp too long, max length is 20 characters.");
+        }
+
+        $this->stamp = $stamp;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getType(): ?string
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param string $type
+     * @return $this
+     */
+    public function setType($type)
+    {
+        $this->type = $type[0];
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getVersion(): ?string
+    {
+        return $this->version;
+    }
+
+    /**
+     * @param string $version
+     * @return $this
+     */
+    public function setVersion($version)
+    {
+        $this->version = substr($version, 0, 4);
 
         return $this;
     }

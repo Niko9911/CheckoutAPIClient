@@ -10,12 +10,12 @@ class PaymentSpec extends ObjectBehavior
     /**
      * @var string 375917 is the test id for Checkout Finland
      */
-    private $demo_merchant_id       = "375917";
+    private $demo_merchant_id       = '375917';
 
     /**
      * @var string SAIPPUAKAUPPIAS is the secret for the test merchant
      */
-    private $demo_merchant_secret   = "SAIPPUAKAUPPIAS";
+    private $demo_merchant_secret   = 'SAIPPUAKAUPPIAS';
 
     function it_is_initializable()
     {
@@ -79,17 +79,17 @@ class PaymentSpec extends ObjectBehavior
 
     function it_throws_exception_when_amount_is_too_large()
     {
-        $this->shouldThrow('CheckoutFinland\Exceptions\AmountTooLargeException')->duringSetAmount("100000000");
+        $this->shouldThrow('CheckoutFinland\Exceptions\AmountTooLargeException')->duringSetAmount('100000000');
     }
 
     function it_throws_exception_when_amount_is_too_small()
     {
-        $this->shouldThrow('CheckoutFinland\Exceptions\AmountUnderMinimumException')->duringSetAmount("10");
+        $this->shouldThrow('CheckoutFinland\Exceptions\AmountUnderMinimumException')->duringSetAmount('10');
     }
 
     function it_throws_exceptions_when_urls_are_too_long()
     {
-        $long_url = str_pad("http://f", 301, "o");
+        $long_url = str_pad('http://f', 301, 'o');
 
         $this->shouldThrow('CheckoutFinland\Exceptions\UrlTooLongException')->duringSetCancelUrl($long_url);
         $this->shouldThrow('CheckoutFinland\Exceptions\UrlTooLongException')->duringSetReturnUrl($long_url);
@@ -119,8 +119,8 @@ class PaymentSpec extends ObjectBehavior
 
     function it_truncates_strings_that_are_too_long_when_they_are_not_critical()
     {
-        $long_name = str_pad("Jeffrey", 45, "y");
-        $long_name_truncated = str_pad("Jeffrey", 40, "y");
+        $long_name = str_pad('Jeffrey', 45, 'y');
+        $long_name_truncated = str_pad('Jeffrey', 40, 'y');
 
         $this->setFirstName($long_name);
         $this->getFirstName()->shouldBe($long_name_truncated);

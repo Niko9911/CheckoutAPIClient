@@ -63,8 +63,9 @@ class Response
     {
         $expected_mac = null;
 
-        if ($this->algorithm === 3) {
-            $expected_mac = strtoupper(hash_hmac('sha256', "$this->version&$this->stamp&$this->reference&$this->payment&$this->status&$this->algorithm", $this->merchant_secret));
+        /** @noinspection TypeUnsafeComparisonInspection */
+        if ($this->algorithm == 3) {
+            $expected_mac = strtoupper(hash_hmac("sha256", "$this->version&$this->stamp&$this->reference&$this->payment&$this->status&$this->algorithm", $this->merchant_secret));
         } else {
             throw new UnsupportedAlgorithmException('UnsupportedAlgorithm');
         }
@@ -74,6 +75,7 @@ class Response
         }
 
         throw new MacMismatchException('MacMismatch');
+
     }
 
     /**
@@ -229,9 +231,9 @@ class Response
     }
 
     /**
-     * @return string
+     * @return int
      */
-    public function getVersion(): string
+    public function getVersion(): int
     {
         return $this->version;
     }
