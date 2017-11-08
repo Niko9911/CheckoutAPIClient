@@ -14,9 +14,7 @@ Also extension version might be little bit faster than library based.
 ## Requirements
 
 The following version of PHP are supported.
- - PHP 5.5 (Not confirmed)
- - PHP 5.6 (Not confirmed)
- - PHP 7.0 (Not confirmed)
+ - PHP 7.0 (Confirmed)
  - PHP 7.1 (Confirmed)
  - PHP 7.2 (Confirmed)
  
