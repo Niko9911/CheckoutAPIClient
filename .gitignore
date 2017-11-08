@@ -22,29 +22,29 @@ demos/
 extras/documentation
 
 # Extension Directory
-ext/checkoutfinland/.temp/
-ext/checkoutfinland/*.log
-ext/checkoutfinland/ext/*
+ext/checkout/.temp/
+ext/checkout/*.log
+ext/checkout/ext/*
 
-!ext/checkoutfinland/ext/clean
-!ext/checkoutfinland/ext/config.m4
-!ext/checkoutfinland/ext/config.w32
-!ext/checkoutfinland/ext/ext.h
-!ext/checkoutfinland/ext/ext_config.h
-!ext/checkoutfinland/ext/foodhunt.c
-!ext/checkoutfinland/ext/foodhunt.h
-!ext/checkoutfinland/ext/install
-!ext/checkoutfinland/ext/php_ext.h
-!ext/checkoutfinland/ext/php_foodhunt.h
-!ext/checkoutfinland/ext/kernel
-!ext/checkoutfinland/ext/foodhunt
+!ext/checkout/ext/clean
+!ext/checkout/ext/config.m4
+!ext/checkout/ext/config.w32
+!ext/checkout/ext/ext.h
+!ext/checkout/ext/ext_config.h
+!ext/checkout/ext/foodhunt.c
+!ext/checkout/ext/foodhunt.h
+!ext/checkout/ext/install
+!ext/checkout/ext/php_ext.h
+!ext/checkout/ext/php_foodhunt.h
+!ext/checkout/ext/kernel
+!ext/checkout/ext/foodhunt
 
 # Zephir compiler cache files.
-ext/checkoutfinland/ext/foodhunt/helpers/.libs/
-ext/checkoutfinland/ext/foodhunt/helpers/*.lo
-ext/checkoutfinland/ext/foodhunt/libs/.libs/
-ext/checkoutfinland/ext/foodhunt/libs/*.lo
-ext/checkoutfinland/ext/kernel/.libs/
-ext/checkoutfinland/ext/kernel/*.lo
-ext/checkoutfinland/ext/kernel/*.gch
-!ext/checkoutfinland/foodhunt/
+ext/checkout/ext/foodhunt/helpers/.libs/
+ext/checkout/ext/foodhunt/helpers/*.lo
+ext/checkout/ext/foodhunt/libs/.libs/
+ext/checkout/ext/foodhunt/libs/*.lo
+ext/checkout/ext/kernel/.libs/
+ext/checkout/ext/kernel/*.lo
+ext/checkout/ext/kernel/*.gch
+!ext/checkout/foodhunt/
