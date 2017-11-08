@@ -1,10 +1,15 @@
 {
-    "name": "rkioski/checkout-finland-api-client",
+    "name": "niko9911/checkout-finland-api-client",
     "description": "API client for the payment gateway of Checkout Finland Oy.",
     "minimum-stability": "dev",
     "keywords": ["Checkout Finland", "payment gateway", "api"],
     "license": "MIT",
     "authors": [
+        {
+            "name": "Niko Granö",
+            "email": "niko.grano@ironlions.fi",
+            "homepage": "https://ironlions.fi"
+        },
         {
             "name": "Matti Särkikoski",
             "email": "rkioski@gmail.com",
@@ -12,7 +17,7 @@
         }
     ],
     "require": {
-        "php": ">=5.5"
+        "php": ">=7.1"
     },
     "require-dev": {
         "phpspec/phpspec": "^4.0"
