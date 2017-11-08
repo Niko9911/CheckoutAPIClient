@@ -25,6 +25,8 @@ extras/documentation
 ext/checkout/.temp/
 ext/checkout/*.log
 ext/checkout/ext/*
+ext/checkout/doc/
+ext/checkout/ide/
 
 !ext/checkout/ext/clean
 !ext/checkout/ext/config.m4
