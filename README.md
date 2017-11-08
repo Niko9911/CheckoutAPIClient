@@ -11,5 +11,5 @@ There is two versions from this API client. One is available as PHP-library via 
 Another is written on C and is available as PHP-extension. PHP-extension might be
 little bit faster than PHP-library. At end, both do same.
 
-- <b>Click <a href="https://github.com/Niko9911/CheckoutAPIClient/tree/master/ext">here</a> to see Extension.</b>
-- <b>Click <a href="https://github.com/Niko9911/CheckoutAPIClient/tree/master/src/CheckoutFinland">here</a> to see PHP-library.</b>
+- <b>Click <a href="https://github.com/Niko9911/CheckoutAPIClient/tree/master/extension">here</a> to see Extension.</b>
+- <b>Click <a href="https://github.com/Niko9911/CheckoutAPIClient/tree/master/library/CheckoutFinland">here</a> to see PHP-library.</b>
