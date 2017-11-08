@@ -1,7 +1,7 @@
 CheckoutAPIClient
 =================
 
-[![Build Status](https://travis-ci.org/Niko9911/CheckoutAPIClient.svg?branch=master)](https://travis-ci.org/niko9911/CheckoutAPIClient) [![Latest Stable Version](https://poser.pugx.org/rkioski/checkout-finland-api-client/v/stable.svg)](https://packagist.org/packages/rkioski/checkout-finland-api-client) [![Latest Unstable Version](https://poser.pugx.org/rkioski/checkout-finland-api-client/v/unstable.svg)](https://packagist.org/packages/rkioski/checkout-finland-api-client) [![License](https://poser.pugx.org/rkioski/checkout-finland-api-client/license.svg)](https://packagist.org/packages/rkioski/checkout-finland-api-client)
+[![Build Status](https://travis-ci.org/Niko9911/CheckoutAPIClient.svg?branch=master)](https://travis-ci.org/niko9911/CheckoutAPIClient) [![Latest Stable Version](https://poser.pugx.org/niko9911/checkout-api-client/v/stable.svg)](https://packagist.org/packages/niko9911/checkout-api-client) [![Latest Unstable Version](https://poser.pugx.org/niko9911/checkout-api-client/v/unstable.svg)](https://packagist.org/packages/niko9911/checkout-api-client) [![License](https://poser.pugx.org/niko9911/checkout-api-client/license.svg)](https://packagist.org/packages/niko9911/checkout-api-client)
 
 
 API client for the finnish payment gateway Checkout Finland.
@@ -22,7 +22,7 @@ Client will try to send an HTTP POST by using PHP stream context with file_get_c
 
 Via composer
 ```
-composer require rkioski/checkout-finland-api-client dev-master
+composer require niko9911/checkout-api-client
 ```
 
 # Usage
