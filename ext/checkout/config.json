@@ -1,7 +1,7 @@
 {
     "stubs": {
         "path": "ide\/%version%\/%namespace%\/",
-        "stubs-run-after-generate": true
+        "stubs-run-after-generate": false
     },
     "api": {
         "path": "doc\/%version%",
