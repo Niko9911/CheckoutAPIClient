@@ -51,7 +51,7 @@ class Response
      */
     public function __construct($merchant_secret)
     {
-        $this->merchant_secret  = $merchant_secret;
+        $this->merchant_secret = $merchant_secret;
     }
 
     /**
@@ -59,40 +59,38 @@ class Response
      * @throws MacMismatchException
      * @throws UnsupportedAlgorithmException
      */
-    public function validate()
+    public function validate(): bool
     {
         $expected_mac = null;
 
-        if($this->algorithm == 3) {
-            $expected_mac = strtoupper(hash_hmac("sha256","$this->version&$this->stamp&$this->reference&$this->payment&$this->status&$this->algorithm", $this->merchant_secret));
-        }
-        else {
-            throw new UnsupportedAlgorithmException();
-        }
-
-        if($expected_mac === $this->mac) {
-            return true;
+        if ($this->algorithm === 3) {
+            $expected_mac = strtoupper(hash_hmac('sha256', "$this->version&$this->stamp&$this->reference&$this->payment&$this->status&$this->algorithm", $this->merchant_secret));
         } else {
-            throw new MacMismatchException();
+            throw new UnsupportedAlgorithmException('UnsupportedAlgorithm');
         }
 
-        return false;
+        if ($expected_mac === $this->mac) {
+            return true;
+        }
+
+        throw new MacMismatchException('MacMismatch');
     }
 
     /**
      * @param $params
+     * @return $this
      */
     public function setRequestParams($params)
     {
         $params = array_change_key_case($params, CASE_UPPER);
 
-        $this->version      = isset($params['VERSION']) ? $params['VERSION'] : null;
-        $this->stamp        = isset($params['STAMP']) ? $params['STAMP'] : null;
-        $this->reference    = isset($params['REFERENCE']) ? $params['REFERENCE'] : null;
-        $this->payment      = isset($params['PAYMENT']) ? $params['PAYMENT'] : null;
-        $this->status       = isset($params['STATUS']) ? $params['STATUS'] : null;
-        $this->algorithm    = isset($params['ALGORITHM']) ? $params['ALGORITHM'] : null;
-        $this->mac          = isset($params['MAC']) ? $params['MAC'] : null;
+        $this->version = $params['VERSION'] ?? null;
+        $this->stamp = $params['STAMP'] ?? null;
+        $this->reference = $params['REFERENCE'] ?? null;
+        $this->payment = $params['PAYMENT'] ?? null;
+        $this->status = $params['STATUS'] ?? null;
+        $this->algorithm = $params['ALGORITHM'] ?? null;
+        $this->mac = $params['MAC'] ?? null;
 
         return $this;
     }
@@ -107,6 +105,7 @@ class Response
 
     /**
      * @param mixed $algorithm
+     * @return $this
      */
     public function setAlgorithm($algorithm)
     {
@@ -125,6 +124,7 @@ class Response
 
     /**
      * @param mixed $mac
+     * @return $this
      */
     public function setMac($mac)
     {
@@ -136,13 +136,14 @@ class Response
     /**
      * @return string
      */
-    public function getMerchantSecret()
+    public function getMerchantSecret(): string
     {
         return $this->merchant_secret;
     }
 
     /**
      * @param string $merchant_secret
+     * @return $this
      */
     public function setMerchantSecret($merchant_secret)
     {
@@ -154,13 +155,14 @@ class Response
     /**
      * @return string
      */
-    public function getPayment()
+    public function getPayment(): string
     {
         return $this->payment;
     }
 
     /**
      * @param string $payment
+     * @return $this
      */
     public function setPayment($payment)
     {
@@ -172,13 +174,14 @@ class Response
     /**
      * @return string
      */
-    public function getReference()
+    public function getReference(): string
     {
         return $this->reference;
     }
 
     /**
      * @param string $reference
+     * @return $this
      */
     public function setReference($reference)
     {
@@ -190,13 +193,14 @@ class Response
     /**
      * @return string
      */
-    public function getStamp()
+    public function getStamp(): string
     {
         return $this->stamp;
     }
 
     /**
      * @param string $stamp
+     * @return $this
      */
     public function setStamp($stamp)
     {
@@ -208,13 +212,14 @@ class Response
     /**
      * @return int
      */
-    public function getStatus()
+    public function getStatus(): int
     {
         return $this->status;
     }
 
     /**
      * @param int $status
+     * @return $this
      */
     public function setStatus($status)
     {
@@ -226,13 +231,14 @@ class Response
     /**
      * @return string
      */
-    public function getVersion()
+    public function getVersion(): string
     {
         return $this->version;
     }
 
     /**
      * @param string $version
+     * @return $this
      */
     public function setVersion($version)
     {

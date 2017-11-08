@@ -90,7 +90,7 @@ class Poll
      *
      *   @return string
      */
-    public function calculateMac()
+    public function calculateMac(): string
     {
         $mac_string = $this->getVersion();
 
@@ -108,7 +108,7 @@ class Poll
     /**
      * @return string
      */
-    public function getVersion()
+    public function getVersion(): string
     {
         return $this->version;
     }
@@ -116,7 +116,7 @@ class Poll
     /**
      * @param string $version
      */
-    public function setVersion($version)
+    public function setVersion($version): void
     {
         $this->version = $version;
     }
@@ -124,7 +124,7 @@ class Poll
     /**
      * @return string
      */
-    public function getStamp()
+    public function getStamp(): string
     {
         return $this->stamp;
     }
@@ -132,7 +132,7 @@ class Poll
     /**
      * @param string $stamp
      */
-    public function setStamp($stamp)
+    public function setStamp($stamp): void
     {
         $this->stamp = $stamp;
     }
@@ -140,7 +140,7 @@ class Poll
     /**
      * @return string
      */
-    public function getReference()
+    public function getReference(): string
     {
         return $this->reference;
     }
@@ -148,7 +148,7 @@ class Poll
     /**
      * @param string $reference
      */
-    public function setReference($reference)
+    public function setReference($reference): void
     {
         $this->reference = $reference;
     }
@@ -156,7 +156,7 @@ class Poll
     /**
      * @return string
      */
-    public function getMerchantId()
+    public function getMerchantId(): string
     {
         return $this->merchantId;
     }
@@ -164,7 +164,7 @@ class Poll
     /**
      * @param string $merchantId
      */
-    public function setMerchantId($merchantId)
+    public function setMerchantId($merchantId): void
     {
         $this->merchantId = $merchantId;
     }
@@ -172,7 +172,7 @@ class Poll
     /**
      * @return string
      */
-    public function getMerchantSecret()
+    public function getMerchantSecret(): string
     {
         return $this->merchantSecret;
     }
@@ -180,7 +180,7 @@ class Poll
     /**
      * @param string $merchantSecret
      */
-    public function setMerchantSecret($merchantSecret)
+    public function setMerchantSecret($merchantSecret): void
     {
         $this->merchantSecret = $merchantSecret;
     }
@@ -188,7 +188,7 @@ class Poll
     /**
      * @return string
      */
-    public function getAmount()
+    public function getAmount(): string
     {
         return $this->amount;
     }
@@ -196,7 +196,7 @@ class Poll
     /**
      * @param string $amount
      */
-    public function setAmount($amount)
+    public function setAmount($amount): void
     {
         $this->amount = $amount;
     }
@@ -204,7 +204,7 @@ class Poll
     /**
      * @return string
      */
-    public function getCurrency()
+    public function getCurrency(): string
     {
         return $this->currency;
     }
@@ -212,7 +212,7 @@ class Poll
     /**
      * @param string $currency
      */
-    public function setCurrency($currency)
+    public function setCurrency($currency): void
     {
         $this->currency = $currency;
     }
@@ -220,7 +220,7 @@ class Poll
     /**
      * @return string
      */
-    public function getFormat()
+    public function getFormat(): string
     {
         return $this->format;
     }
@@ -228,7 +228,7 @@ class Poll
     /**
      * @param string $format
      */
-    public function setFormat($format)
+    public function setFormat($format): void
     {
         $this->format = $format;
     }
@@ -236,7 +236,7 @@ class Poll
     /**
      * @return string
      */
-    public function getAlgorithm()
+    public function getAlgorithm(): string
     {
         return $this->algorithm;
     }
@@ -244,7 +244,7 @@ class Poll
     /**
      * @param string $algorithm
      */
-    public function setAlgorithm($algorithm)
+    public function setAlgorithm($algorithm): void
     {
         $this->algorithm = $algorithm;
     }

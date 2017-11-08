@@ -1,6 +1,7 @@
 <?php
 
 namespace CheckoutFinland;
+use \RuntimeException;
 
 /**
  * Class Client
@@ -17,7 +18,7 @@ class Client
      * @throws \Exception
      * @return string
      */
-    public function sendPayment(Payment $payment)
+    public function sendPayment(Payment $payment): string
     {
         $postData = [
             'VERSION'       => ''. $payment->getVersion(),
@@ -46,7 +47,7 @@ class Client
             'MAC'           => ''. $payment->calculateMac()
         ];
 
-        return $this->postData("https://payment.checkout.fi", $postData);
+        return $this->postData('https://payment.checkout.fi', $postData);
     }
 
     /**
@@ -54,8 +55,9 @@ class Client
      *
      * @param Poll $poll
      * @return string
+     * @throws \Exception
      */
-    public function poll(Poll $poll)
+    public function poll(Poll $poll): string
     {
         $postData = [
             'VERSION'   => $poll->getVersion(),
@@ -83,10 +85,9 @@ class Client
      * @throws \Exception
      * @return string
      */
-    private function postData($url, $postData)
+    private function postData($url, $postData): ?string
     {
-        if(ini_get('allow_url_fopen'))
-        {
+        if (ini_get('allow_url_fopen')) {
             $context = stream_context_create(array(
                 'http' => array(
                     'method' => 'POST',
@@ -94,11 +95,11 @@ class Client
                     'content' => http_build_query($postData)
                 )
             ));
-            
+
             return file_get_contents($url, false, $context);
-        } 
-        elseif(in_array('curl', get_loaded_extensions()) ) 
-        {
+        }
+
+        if(in_array('curl', get_loaded_extensions(), true)) {
             $options = array(
                 CURLOPT_POST            => 1,
                 CURLOPT_HEADER          => 0,
@@ -109,7 +110,7 @@ class Client
                 CURLOPT_TIMEOUT         => 4,
                 CURLOPT_POSTFIELDS      => http_build_query($postData)
             );
-        
+
             $ch = curl_init();
             curl_setopt_array($ch, $options);
             $result = curl_exec($ch);
@@ -117,9 +118,6 @@ class Client
 
             return $result;
         }
-        else 
-        {
-            throw new \Exception("No valid method to post data. Set allow_url_fopen setting to On in php.ini file or install curl extension.");
-        }
+        throw new RuntimeException('No valid method to post data. Set allow_url_fopen setting to On in php.ini file or install curl extension.');
     }
 }
