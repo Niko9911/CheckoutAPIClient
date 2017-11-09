@@ -22,11 +22,11 @@ demos/
 extras/documentation
 
 # Extension Directory
-ext/checkout/.temp/
-ext/checkout/*.log
-ext/checkout/ext/*
-ext/checkout/doc/
-ext/checkout/ide/
+extension/checkout/.temp/
+extension/checkout/*.log
+extension/checkout/ext/*
+extension/checkout/doc/
+extension/checkout/ide/
 
 !ext/checkout/ext/clean
 !ext/checkout/ext/config.m4
@@ -42,11 +42,11 @@ ext/checkout/ide/
 !ext/checkout/ext/foodhunt
 
 # Zephir compiler cache files.
-ext/checkout/ext/foodhunt/helpers/.libs/
-ext/checkout/ext/foodhunt/helpers/*.lo
-ext/checkout/ext/foodhunt/libs/.libs/
-ext/checkout/ext/foodhunt/libs/*.lo
-ext/checkout/ext/kernel/.libs/
-ext/checkout/ext/kernel/*.lo
-ext/checkout/ext/kernel/*.gch
-!ext/checkout/foodhunt/
+extension/checkout/ext/foodhunt/helpers/.libs/
+extension/checkout/ext/foodhunt/helpers/*.lo
+extension/checkout/ext/foodhunt/libs/.libs/
+extension/checkout/ext/foodhunt/libs/*.lo
+extension/checkout/ext/kernel/.libs/
+extension/checkout/ext/kernel/*.lo
+extension/checkout/ext/kernel/*.gch
+!extension/checkout/foodhunt/
