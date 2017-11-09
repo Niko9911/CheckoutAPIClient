@@ -70,7 +70,7 @@ ZEND_BEGIN_ARG_INFO_EX(arginfo_checkout_payment_setorderdata, 0, 0, 5)
 	ZEND_ARG_INFO(0, amount)
 	ZEND_ARG_INFO(0, reference)
 	ZEND_ARG_INFO(0, message)
-	ZEND_ARG_OBJ_INFO(0, deliveryDate, Checkout\\DateTime, 0)
+	ZEND_ARG_INFO(0, deliveryDate)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_checkout_payment_setcustomerdata, 0, 0, 7)

@@ -235,7 +235,7 @@ PHP_METHOD(Checkout_Payment, setDefaultValues) {
  * @param $amount
  * @param $reference
  * @param $message
- * @param \DateTime $deliveryDate
+ * @param $deliveryDate
  * @return $this
  * @throws \CheckoutFinland\Exceptions\AmountUnderMinimumException
  * @throws \CheckoutFinland\Exceptions\AmountTooLargeException

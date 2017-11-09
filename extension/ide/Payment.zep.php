@@ -158,12 +158,11 @@ class Payment
      * @param mixed $amount
      * @param mixed $reference
      * @param mixed $message
-     * @param DateTime $deliveryDate
-     * @param $message
-     * @param \DateTime $$deliveryDate
+     * @param mixed $deliveryDate
+     * @param $deliveryDate
      * @return $this
      */
-    public function setOrderData($stamp, $amount, $reference, $message, DateTime $deliveryDate) {}
+    public function setOrderData($stamp, $amount, $reference, $message, $deliveryDate) {}
 
     /**
      * Sets customer information

@@ -145,13 +145,13 @@ class Payment
      * @param $amount
      * @param $reference
      * @param $message
-     * @param \DateTime $deliveryDate
+     * @param $deliveryDate
      * @return $this
      * @throws \CheckoutFinland\Exceptions\AmountUnderMinimumException
      * @throws \CheckoutFinland\Exceptions\AmountTooLargeException
      * @throws \CheckoutFinland\Exceptions\VariableTooLongException
      */
-    public function setOrderData(stamp, amount, reference, message, <DateTime> deliveryDate)
+    public function setOrderData(stamp, amount, reference, message, deliveryDate)
     {
         this->setStamp(stamp);
         this->setAmount(amount);
