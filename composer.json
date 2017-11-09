@@ -25,6 +25,7 @@
     "autoload": {
         "psr-4": {
             "CheckoutFinland\\": "library/src/CheckoutFinland"
-        }
+        },
+        "exclude-from-classmap": ["/extension/"]
     }
 }
