@@ -25,7 +25,9 @@
     "autoload": {
         "psr-4": {
             "CheckoutFinland\\": "library/src/CheckoutFinland"
-        },
-        "exclude-from-classmap": ["/extension/"]
+        }
+    },
+    "archive": {
+        "exclude": ["extension", ".travis.yml", "phpspec.yml", "library/tests", "library/example"]
     }
 }
