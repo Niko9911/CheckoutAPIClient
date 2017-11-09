@@ -24,7 +24,7 @@
     },
     "autoload": {
         "psr-4": {
-            "CheckoutFinland\\": "src/CheckoutFinland"
+            "CheckoutFinland\\": "library/src/CheckoutFinland"
         }
     }
 }
